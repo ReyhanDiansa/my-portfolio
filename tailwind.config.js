@@ -18,6 +18,18 @@ module.exports = {
         },
         secondary: '#A89BFF',
       },
+      dropShadow: {
+        'custom': '0px 7px 20px #5C45FD',
+      },
+      keyframes: {
+        marquee: {
+          '0%': { transform: 'translateX(100%)' },
+          '100%': { transform: 'translateX(-100%)' },
+        },
+      },
+      animation: {
+        marquee: 'marquee 27s linear infinite',
+      },
     },
   },
   plugins: [],

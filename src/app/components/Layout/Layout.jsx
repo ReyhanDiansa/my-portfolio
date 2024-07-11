@@ -1,11 +1,11 @@
 import React from "react";
-import Navbar from "../Navbar/Navbar";
+import Navbar from "../Elements/Navbar/Navbar";
 
 const Layout = ({ children }) => {
   return (
     <div>
       <Navbar />
-      <div className="px-40 pt-32">{children}</div>
+      <div className="pt-32">{children}</div>
     </div>
   );
 };
