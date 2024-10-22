@@ -1,8 +1,13 @@
+"use client";
+
 import Image from "next/image";
 import React from "react";
-import RunningText from "../RunningText/RunningText";
+import { useRouter } from "next/navigation";
 
 const Hero = () => {
+
+  const router = useRouter();
+
   return (
     <>
       <div className="h-[70vh] w-full flex items-center justify-between">
@@ -19,7 +24,7 @@ const Hero = () => {
             development as a passionate web developer.{" "}
           </p>
           <div>
-            <button className="flex gap-2 items-center bg-primary py-2 px-4 rounded-md transform transition-transform duration-300 hover:scale-110">
+            <button className="flex gap-2 items-center bg-primary py-2 px-4 rounded-md transform transition-transform duration-300 hover:scale-110" onClick={()=>router.push('portfolio')}>
               View My Work
             </button>
           </div>
