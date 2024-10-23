@@ -15,22 +15,22 @@ const AboutUs = () => {
 
   return (
     <>
-      <div className="flex justify-between items-center w-full ">
-        <div className="w-7/12">
-          <div className="flex flex-col   gap-2 drop-shadow-custom">
+      <div className="flex flex-col md:flex-row justify-between items-center w-full ">
+        <div className="md:w-7/12">
+          <div className="flex flex-col   gap-2 drop-shadow-custom my-7 md:my-0">
             <Image
               src={"/asset/images/illustration.svg"}
               width={200}
               height={200}
               alt="illustration"
-              className="w-8/12"
+              className="mx-auto md:mx-0 w-8/12"
             />
-            <div className="w-8/12">
-              <hr className="bg-primary border-2 border-primary rounded-full animate-pulse" />
+            <div className="w-8/12 mx-auto md:mx-0">
+              <hr className="bg-primary border-2 border-primary rounded-full animate-pulse " />
             </div>
           </div>
         </div>
-        <div className="w-8/12 px-5 py-3 h-full bg-blue-400 rounded-md bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-10 border-[1px] border-blue-400 text-sm">
+        <div className="md:w-8/12 px-5 py-3 h-full bg-blue-400 rounded-md bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-10 border-[1px] border-blue-400 text-sm">
           <div className="text-3xl my-5 text-primary font-semibold">
             So Who am I?
           </div>

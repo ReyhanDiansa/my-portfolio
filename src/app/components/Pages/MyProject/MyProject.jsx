@@ -10,7 +10,7 @@ const MyProject = () => {
       <div className="my-10 flex justify-center">
         <p className="text-4xl text-center  w-fit">My <span className="border-b-4  border-primary">Portfolio</span></p>
       </div>
-      <div className="flex justify-center items-center gap-2">
+      <div className="flex flex-col md:flex-row justify-center items-center gap-2">
         <Card
           title="Portal Kedisiplinan Moklet"
           image = "https://reyhanportfolio.vercel.app/karya_images/cloud.png"

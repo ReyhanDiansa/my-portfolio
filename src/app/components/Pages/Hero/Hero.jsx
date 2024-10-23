@@ -10,11 +10,11 @@ const Hero = () => {
 
   return (
     <>
-      <div className="h-[70vh] w-full flex items-center justify-between">
-        <div className="w-7/12">
+      <div className="h-[70vh] w-full flex flex-col-reverse md:flex-row items-center justify-between">
+        <div className="w-full md:w-7/12 pt-3 md:pt-0">
           <h1 className="font-bold mb-4">
-            <span className="text-xl">Hello, I'm </span>{" "}
-            <span className="text-4xl bg-clip-text text-transparent bg-gradient-to-r from-secondary via-primary to-primary-dark">
+            <span className="text-lg md:text-xl">Hello, I'm </span>{" "}
+            <span className="text-3xl md:text-4xl bg-clip-text text-transparent bg-gradient-to-r from-secondary via-primary to-primary-dark">
               Reyhan Marsalino Diansa
             </span>
           </h1>
@@ -35,7 +35,7 @@ const Hero = () => {
             width={350}
             height={350}
             alt="me"
-            className="filter drop-shadow-custom"
+            className="filter drop-shadow-custom w-[35%] md:w-full mx-auto md:mx-0"
           />
         </div>
       </div>

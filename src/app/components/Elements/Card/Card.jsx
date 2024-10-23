@@ -9,9 +9,9 @@ const Card = ({ title, image, content, footer, className, ...props }) => {
             {...props}
         >
             <div className="mb-4 h-[10%]">
-                <h3 className="text-2xl font-semibold text-white">{title}</h3>
+                <h3 className="text-xl md:text-2xl font-semibold text-white">{title}</h3>
             </div>
-            <div className='h-[43%]'>
+            <div className='h-[43%] mt-3 md:mt-0'>
                 <Image src={image} width={400} height={50} alt="project-foto" className='rounded-md'/>
             </div>
             <div className="my-4 h-[20%] text-white opacity-80 leading-5">

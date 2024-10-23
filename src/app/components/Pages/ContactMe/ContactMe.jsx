@@ -14,8 +14,8 @@ const ContactMe = () => {
   const [message, setMessage] = useState("");
 
   return (
-    <div className="flex justify-center">
-      <div className="w-8/12 px-5 py-3 h-full bg-blue-400 rounded-md bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-10 border-[1px] border-blue-400 text-sm">
+    <div className="flex w-full justify-center">
+      <div className="w-full md:w-8/12 px-5 py-3 h-full bg-blue-400 rounded-md bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-10 border-[1px] border-blue-400 text-sm">
         <div className="text-3xl my-5 text-center text-white font-semibold">
           <span className="border-b-4  border-primary">Contact</span> Me
         </div>
