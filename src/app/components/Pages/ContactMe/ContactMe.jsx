@@ -6,12 +6,81 @@ import { MdEmail, MdMessage } from "react-icons/md";
 import Textarea from "../../Elements/Form/Textarea";
 import { FaUser } from "react-icons/fa6";
 import { IoIosSend } from "react-icons/io";
+import emailjs from "emailjs-com";
+import { toast } from "react-toastify";
 
 
 const ContactMe = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
+  const [show, setShow] = useState(false);
+  const [fail, setFail] = useState(false);
+
+  function Success() {
+    if (show === true) {
+      toast.success('Your Message Success to send', {
+        position: "top-right",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "dark",
+      });
+      setShow(false);
+    }
+  }
+
+  function Failed() {
+    if (fail === true) {
+      toast.error('Failed to send', {
+        position: "top-right",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "dark",
+      });
+      setFail(false);
+    }
+  }
+
+  const resetForm = () => {
+    setEmail("");
+    setMessage("");
+    setName("");
+  }
+
+  function sendEmail(e) {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        "service_hzp9wjs",
+        "template_zclapto",
+        e.target,
+        "L56oF-6rZL2pLhGCv"
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+          setShow(true);
+          Success();
+          resetForm();
+        },
+        
+        (error) => {
+          console.log(error.text);
+          setFail(true);
+          Failed();
+          resetForm();
+        }
+      );
+  }
 
   return (
     <div className="flex w-full justify-center">
@@ -19,7 +88,7 @@ const ContactMe = () => {
         <div className="text-3xl my-5 text-center text-white font-semibold">
           <span className="border-b-4  border-primary">Contact</span> Me
         </div>
-        <div>
+        <form onSubmit={sendEmail} >
           <div>
             <Input
               label="Name"
@@ -57,11 +126,11 @@ const ContactMe = () => {
             />
           </div>
           <div>
-            <button className="flex gap-2 items-center bg-primary py-2 px-4 rounded-md transform transition-transform duration-300 hover:scale-110">
+            <button type="submit" className="flex gap-2 items-center bg-primary py-2 px-4 rounded-md transform transition-transform duration-300 hover:scale-110">
             <IoIosSend /> Send
             </button>
           </div>
-        </div>
+        </form>
       </div>
     </div>
   );

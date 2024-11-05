@@ -1,17 +1,40 @@
 "use client";
 
 import Image from "next/image";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Modal from "../../Elements/Modal/Modal";
 import PdfViewer from "../../Elements/PdfViewer/PdfViewer";
+import { getSetting } from "@/utils/getSetting";
+import { toast } from "react-toastify";
 
 const AboutUs = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [cv, setCv] = useState("");
 
   const openModal = () => setIsModalOpen(true);
   const closeModal = () => setIsModalOpen(false);
 
-  const pdfUrl = "/file/CV_Reyhan Marsalino Diansa.pdf";
+  const getCV = async () => {
+    const getCVData = await getSetting('CV');
+    
+    if(getCVData.status === "success" ){
+      setCv(getCVData.data.value);
+    } else {
+      toast.error(getCVData?.message, {
+        position: "top-right",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "dark",
+      });
+    }
+  }
+  useEffect(()=>{
+    getCV();
+  },[])
 
   return (
     <>
@@ -66,7 +89,8 @@ const AboutUs = () => {
       </div>
       <div className="w-full">
         <Modal isOpen={isModalOpen} onClose={closeModal} title="My Modal" withClose={false}>
-          <PdfViewer pdfUrl={pdfUrl} />
+          {/* <PdfViewer pdfUrl={pdfUrl} /> */}
+          <iframe src={cv} width="640" height="530" allow="autoplay"></iframe>
         </Modal>
       </div>
     </>
