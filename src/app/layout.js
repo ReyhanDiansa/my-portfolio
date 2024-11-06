@@ -14,7 +14,7 @@ export const metadata = {
   },
   description: "Portfolio website by Reyhan Marsalino Diansa use Nextjs and Api from Nodejs",
   favicon:"/favicon.ico",
-  keywords: ['Next.js', 'React', 'JavaScript', 'Portfolio', 'Nodejs', 'Nextjs'],
+  keywords: ['Next.js', 'React', 'JavaScript', 'Portfolio', 'Nodejs', 'Nextjs', 'Reyhan', 'Reyhan Diansa', 'Reyhan Marsalino Diansa'],
   creator: 'Reyhan Marsalino Diansa',
   publisher: 'Reyhan Marsalino Diansa',
   openGraph:{

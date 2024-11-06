@@ -60,7 +60,7 @@ const Footer = () => {
             <Link href={"/contact"}>Contact</Link>
           </div>
           <div className="flex gap-3 my-3 justify-center items-center">
-            <p>Copyright © {year}</p>
+            <p>Copyright © {year} | Build by Reyhan Marsalino Diansa</p>
           </div>
         </div>
       </div>
