@@ -37,7 +37,7 @@ module.exports = {
         },
       },
       animation: {
-        marquee: 'marquee 27s linear infinite',
+        marquee: 'marquee 40s linear infinite',
       },
     },
   },

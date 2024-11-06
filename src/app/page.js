@@ -1,9 +1,22 @@
 import Layout from "./components/Layout/Layout";
-import AboutUs from "./components/Pages/AboutUs/AboutUs";
+import AboutMe from "./components/Pages/AboutMe/AboutMe";
 import Hero from "./components/Pages/Hero/Hero";
 import TextRunner from "./components/Elements/RunningText/RunningText";
 import MyProject from "./components/Pages/MyProject/MyProject";
 import ContactMe from "./components/Pages/ContactMe/ContactMe";
+
+export const metadata = {
+  metadataBase:new URL(`${process.env.NEXT_PUBLIC_BASE_URL}`),
+  title: "Home | Reyhan Marsalino Diansa Portfolio",
+  description: "Portfolio website by Reyhan Marsalino ",
+  openGraph:{
+    title: "Home | Reyhan Marsalino Diansa Portfolio",
+    description: "Portfolio website by Reyhan Marsalino ",
+    type:"website",
+    url:process.env.NEXT_PUBLIC_BASE_URL,
+    siteName:"Reyhan Marsalino Diansa Portfolio"
+  }
+};
 
 
 export default function Home() {
@@ -16,7 +29,7 @@ export default function Home() {
         <TextRunner />
       </div>
       <div className="px-10 py-10 md:px-40 md:py-32 ">
-        <AboutUs/>
+        <AboutMe/>
       </div>
       <div className="px-10 py-10 md:px-40 md:py-20">
         <MyProject/>

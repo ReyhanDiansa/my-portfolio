@@ -7,7 +7,7 @@ import PdfViewer from "../../Elements/PdfViewer/PdfViewer";
 import { getSetting } from "@/utils/getSetting";
 import { toast } from "react-toastify";
 
-const AboutUs = () => {
+const AboutMe = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [cv, setCv] = useState("");
 
@@ -97,4 +97,4 @@ const AboutUs = () => {
   );
 };
 
-export default AboutUs;
+export default AboutMe;
