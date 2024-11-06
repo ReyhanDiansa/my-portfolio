@@ -54,9 +54,9 @@ const AboutMe = () => {
           </div>
         </div>
         <div className="md:w-8/12 px-5 py-3 h-full bg-blue-400 rounded-md bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-10 border-[1px] border-blue-400 text-sm">
-          <div className="text-3xl my-5 text-primary font-semibold">
+          <h2 className="text-3xl my-5 text-primary font-semibold">
             So Who am I?
-          </div>
+          </h2>
           <div>
             I am a young and enthusiastic programmer and a fresh graduate of SMK
             Telkom Malang. I am honored to introduce myself through this

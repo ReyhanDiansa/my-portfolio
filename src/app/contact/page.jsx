@@ -11,6 +11,9 @@ export const metadata = {
     type:"website",
     url:process.env.NEXT_PUBLIC_BASE_URL+'contact',
     siteName:"Reyhan Marsalino Diansa Portfolio"
+  },
+  alternates: {
+    canonical: process.env.NEXT_PUBLIC_BASE_URL+'contact'
   }
 };
 
