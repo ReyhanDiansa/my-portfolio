@@ -43,6 +43,6 @@ body {
 
 @media (max-width: 640px) {
   .animate-marquee {
-    min-width: 200% !important; /* Pastikan cukup lebar untuk scrolling */
+    min-width: 400% !important; /* Pastikan cukup lebar untuk scrolling */
   }
 }
