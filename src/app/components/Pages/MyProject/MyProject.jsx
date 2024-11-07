@@ -101,6 +101,7 @@ const MyProject = () => {
             classNames={{
               item: "font-bold",
             }}
+            page={currentPage}
             onChange={(p) => changePage(p)}
           />
         </div>

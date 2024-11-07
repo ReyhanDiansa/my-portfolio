@@ -88,7 +88,7 @@ const AboutMe = () => {
         </div>
       </div>
       <div className="w-full">
-        <Modal isOpen={isModalOpen} onClose={closeModal} title="My Modal" withClose={false}>
+        <Modal isOpen={isModalOpen} onClose={closeModal} title="My CV" withClose={false}>
           {/* <PdfViewer pdfUrl={pdfUrl} /> */}
           <iframe src={cv} width="640" height="530" allow="autoplay"></iframe>
         </Modal>

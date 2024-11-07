@@ -4,6 +4,7 @@ import Hero from "./components/Pages/Hero/Hero";
 import TextRunner from "./components/Elements/RunningText/RunningText";
 import MyProject from "./components/Pages/MyProject/MyProject";
 import ContactMe from "./components/Pages/ContactMe/ContactMe";
+import Career from "./components/Pages/Career/Career";
 
 export const metadata = {
   metadataBase:new URL(`${process.env.NEXT_PUBLIC_BASE_URL}`),
@@ -36,6 +37,9 @@ export default function Home() {
       </div>
       <div className="px-10 py-10 md:px-40 md:py-20">
         <MyProject/>
+      </div>
+      <div className="px-10 py-10 md:px-40 md:py-20">
+        <Career />
       </div>
       <div className="px-10 py-10 md:px-40 md:py-20">
         <ContactMe />
