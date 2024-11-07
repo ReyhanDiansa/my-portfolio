@@ -12,6 +12,10 @@
         "url": "/portfolio"
     },
     {
+        "name": "Career",
+        "url": "/career"
+    },
+    {
         "name": "Contact",
         "url": "/contact"
     }
