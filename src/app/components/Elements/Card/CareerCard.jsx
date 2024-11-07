@@ -17,10 +17,10 @@ const CareerCard = ({
 }) => {
   return (
     <div
-      className={`bg-blue-400 rounded-md bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-10 border-[1px] border-blue-400 p-3 md:p-6 h-[11rem] md:h-[12rem] w-[30rem] ${className}`}
+      className={`bg-blue-400 rounded-md bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-10 border-[1px] border-blue-400 p-3 md:p-5 h-[12.5rem] md:h-[13.5rem] w-[30rem] ${className}`}
       {...props}
     >
-      <div className="flex gap-5 items-center">
+      <div className="flex gap-5 items-center h-[65%]">
         <div className="bg-gray-200 px-2 py-1 rounded-md">
           <Image
             src={image}
