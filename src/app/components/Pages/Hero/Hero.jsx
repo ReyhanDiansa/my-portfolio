@@ -1,13 +1,34 @@
 "use client";
 
 import Image from "next/image";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
+import { getSetting } from "../../../../utils/getSetting";
 
 const Hero = () => {
+  const [personalFoto, setFoto] = useState("");
 
-  const router = useRouter();
-
+  const getFoto = async () => {
+    const getCVData = await getSetting('PERSONAL_FOTO');
+    
+    if(getCVData.status === "success" ){
+      setFoto(getCVData.data.value);
+    } else {
+      toast.error(getCVData?.message, {
+        position: "top-right",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "dark",
+      });
+    }
+  }
+  useEffect(()=>{
+    getFoto();
+  },[])
   return (
     <>
       <div className="h-[70vh] w-full flex flex-col-reverse md:flex-row items-center justify-between">
@@ -31,11 +52,11 @@ const Hero = () => {
         </div>
         <div className="my-auto z-0">
           <Image
-            src={"/asset/images/me.png"}
+            src={personalFoto}
             width={350}
             height={350}
             alt="me"
-            className="filter drop-shadow-custom w-[35%] md:w-full mx-auto md:mx-0"
+            className="filter drop-shadow-custom w-[35%] md:w-full mx-auto md:mx-0 border-b-2 border-primary md:border-none"
           />
         </div>
       </div>
