@@ -53,10 +53,10 @@ const Hero = () => {
         <div className="my-auto z-0">
           <Image
             src={personalFoto}
-            width={350}
-            height={350}
+            width={400}
+            height={400}
             alt="me"
-            className="filter drop-shadow-custom w-[35%] md:w-full mx-auto md:mx-0 border-b-2 border-primary md:border-none"
+            className="filter drop-shadow-custom w-[45%] md:w-full mx-auto md:mx-0 border-b-2 border-primary"
           />
         </div>
       </div>
